@@ -1,6 +1,11 @@
 package com.samsung.tcm.tca.standalone;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class AnalysisExecuter {
+    private Logger logger = LoggerFactory.getLogger(AnalysisExecuter.class);
+
     private SchemaFetchRunner schemaFetchRunner = null;
 
 //    public AnalysisExecuter() {

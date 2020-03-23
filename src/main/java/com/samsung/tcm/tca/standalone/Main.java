@@ -1,5 +1,8 @@
 package com.samsung.tcm.tca.standalone;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
@@ -12,6 +15,7 @@ import java.util.jar.Manifest;
 
 @Command(name = "tca-standalone", mixinStandardHelpOptions = true, versionProvider = Main.ManifestVersionProvider.class)
 public class Main implements Runnable {
+    private static Logger logger = LoggerFactory.getLogger(Main.class);
 
     @Option(names = {"-l", "--local"}, description = "blah blah")
     private boolean isLocal = false;
