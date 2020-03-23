@@ -4,6 +4,8 @@ import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -15,6 +17,8 @@ import static org.mockito.Mockito.when;
 //@RunWith(PowerMockRunner.class)
 //@PrepareForTest(AnalysisExecuter.class)
 public class AnalysisExecuterTest {
+    private Logger logger = LoggerFactory.getLogger(AnalysisExecuterTest.class);
+
     // https://github.com/park9n/FAQ/blob/master/mockito.md#what-is-different-between-mockitomock-and-mock
     @Mock
     SchemaFetchRunner mockSchemaFetchRunner;

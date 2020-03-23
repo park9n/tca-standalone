@@ -5,6 +5,8 @@ import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -18,6 +20,8 @@ import static org.powermock.api.mockito.PowerMockito.*;
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({TCMContext.class})
 public class SchemaFetchRunnerWithLocalTest {
+    private Logger logger = LoggerFactory.getLogger(SchemaFetchRunnerWithLocalTest.class);
+
     SchemaFetchRunnerWithLocal schemaFetchRunnerWithLocal = new SchemaFetchRunnerWithLocal();
 
     @Test

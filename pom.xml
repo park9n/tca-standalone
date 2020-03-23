@@ -8,8 +8,6 @@
     <artifactId>tca-standalone</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <packaging>jar</packaging>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -30,6 +28,12 @@
             <artifactId>junit5-system-exit</artifactId>
             <version>1.0.0</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
         </dependency>
 
         <dependency>
@@ -102,6 +106,7 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
+                    <appendAssemblyId>true</appendAssemblyId>
                     <archive>
                         <manifest>
                             <mainClass>com.samsung.tcm.tca.standalone.Main</mainClass>
