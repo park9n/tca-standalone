@@ -26,6 +26,14 @@ public class Main implements Runnable {
     AnalysisExecuter analysisExecuter = null;
     RunnerFactory runnerFactory = null;
 
+    void setAnalysisExecuter(AnalysisExecuter ae) {
+        analysisExecuter = ae;
+    }
+
+    void setRunnerFactory(RunnerFactory rf) {
+        runnerFactory = rf;
+    }
+
     public static void main(String[] args) {
         int exitCode = new CommandLine(new Main()).execute(args);
         System.exit(exitCode);
